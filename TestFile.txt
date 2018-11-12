@@ -1,0 +1,39 @@
+<html>
+<body>
+<center><font size="+2" face="monotype corsiva" color="blue">
+<script>
+document.write('Решение квадратного уравнения вида A(x^2) + B(x) + C = 0')
+document.bgColor="#40E0D0";
+</script>
+</font>
+<p>
+<p>
+<form name="frm">
+Введите параметр а: <input type="text" name="a">
+Введите параметр b: <input type="text" name="b">
+Введите параметр c: <input type="text" name="c">
+<p><button onclick="make()">Решить уравнение</button></center>
+</form>
+<script>
+function make() {
+   var a = parseFloat(frm.a.value);
+   var b = parseFloat(frm.b.value);
+   var c = parseFloat(frm.c.value);
+   var x1, x2, d;
+   d = b*b - 4*a*c;
+	alert('D = ' + d);
+   if (d < 0) {
+   alert('Уравнение не имеет действительных корней');} 
+	else { if (d == 0) {
+		alert('Уравнение имеет один корень');
+		x1 = ( - b + Math.sqrt( d ) ) / ( 2 * a );
+		alert(x1);} 
+	else {
+		alert('Уравнение имеет два корня');
+		x1 = ( - b + Math.sqrt( d ) ) / ( 2 * a );
+		x2 = ( - b - Math.sqrt( d ) ) / ( 2 * a );
+	var solve = [x1, x2];
+	alert(solve);}}}
+</script>
+</body>
+</html>
